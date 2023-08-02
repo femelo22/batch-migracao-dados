@@ -18,7 +18,7 @@ public class MigracaoDadosJobConfig {
 	private JobBuilderFactory jobBuilderFactory;
 	
 	@Bean
-	public Job migracaoDadosJobConfig(
+	public Job migracaoDadosJob(
 			@Qualifier("migrarPessoaStep") Step migrarPessoaStep,
 			@Qualifier("migrarDadosBancariosStep") Step migrarDadosBancariosStep) {
 		

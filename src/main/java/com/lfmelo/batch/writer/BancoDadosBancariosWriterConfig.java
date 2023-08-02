@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Configuration;
 import com.lfmelo.batch.domain.DadosBancarios;
 
 @Configuration
-public class BancoDadosBancariosWriter {
+public class BancoDadosBancariosWriterConfig {
 
 	@Bean
-	public JdbcBatchItemWriter<DadosBancarios> bancoDadosBancariosWriter(@Qualifier("app.datasource") DataSource dataSource) {
+	public JdbcBatchItemWriter<DadosBancarios> bancoDadosBancariosWriter(@Qualifier("appDataSource") DataSource dataSource) {
 		return new JdbcBatchItemWriterBuilder<DadosBancarios>()
 				.dataSource(dataSource)
 				.sql("INSERT INTO dados_bancarios (id, pessoa_id, agencia, conta, banco) VALUES (:id, :pessoaId, :agencia, :conta, :banco)")

@@ -14,8 +14,8 @@ import org.springframework.validation.BindException;
 import com.lfmelo.batch.domain.Pessoa;
 
 @Configuration
-public class ArquivoPessoaReader {
-	
+public class ArquivoPessoaReaderConfig {
+
 	/**
 	 * addComment - Ajuda a ignorar linhas que possuem comentários
 	 * targetType - Quando os dados são mapeados diretamente para classe de dominio

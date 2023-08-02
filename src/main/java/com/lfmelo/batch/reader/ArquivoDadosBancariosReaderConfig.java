@@ -9,7 +9,7 @@ import org.springframework.core.io.FileSystemResource;
 import com.lfmelo.batch.domain.DadosBancarios;
 
 @Configuration
-public class ArquivoDadosBancariosReader {
+public class ArquivoDadosBancariosReaderConfig {
 
 	@Bean
 	public FlatFileItemReader<DadosBancarios> arquivoDadosBancariosReader() {

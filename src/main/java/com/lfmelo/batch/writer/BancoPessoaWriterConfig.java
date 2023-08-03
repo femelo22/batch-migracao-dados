@@ -17,6 +17,13 @@ import com.lfmelo.batch.domain.Pessoa;
 
 @Configuration
 public class BancoPessoaWriterConfig {
+
+	/**
+	 *
+	 * @param dataSource
+	 * Utilizando o leitor JdbcBatchItemWriter
+	 * @return
+	 */
 	
 	@Bean
 	public JdbcBatchItemWriter<Pessoa> bancoPessoaWriter(@Qualifier("appDataSource") DataSource dataSource) {

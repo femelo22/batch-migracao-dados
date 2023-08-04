@@ -25,9 +25,7 @@ public class PessoaClassifierWriterConfig {
      */
 
     @Bean
-    public ClassifierCompositeItemWriter<Pessoa> pessoaClassifierWriter(
-            JdbcBatchItemWriter<Pessoa> bancoPessoaWriter,
-            FlatFileItemWriter<Pessoa> arquivoPessoasInvalidasWriter) {
+    public ClassifierCompositeItemWriter<Pessoa> pessoaClassifierWriter(JdbcBatchItemWriter<Pessoa> bancoPessoaWriter, FlatFileItemWriter<Pessoa> arquivoPessoasInvalidasWriter) {
         return new ClassifierCompositeItemWriterBuilder<Pessoa>()
                 .classifier(classifier(bancoPessoaWriter, arquivoPessoasInvalidasWriter))
                 .build();
@@ -45,7 +43,6 @@ public class PessoaClassifierWriterConfig {
                 else
                     return arquivoPessoasInvalidasWriter;
             }
-
         };
     }
 }
